@@ -1,5 +1,5 @@
 # Online shop Application - SHOPPLE
-This GIT repository provieds website with Java backend and Application on Android
+This GIT repository provides website with backend on Java and Application on Android
 
 SHOPPLE - an online store selling exclusively Apple technology. There will also be ads for used products that are in more or less good condition.
 
