@@ -1,0 +1,677 @@
+2022-05-20 05:52:21.758  INFO 5472 --- [main] com.example.task5.Task5Application       : Starting Task5Application on MacBook-Pro-user.local with PID 5472 (/Users/user/Downloads/onlineShop-master-2/target/classes started by user in /Users/user/Downloads/onlineShop-master-2)
+2022-05-20 05:52:21.772 DEBUG 5472 --- [main] com.example.task5.Task5Application       : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2022-05-20 05:52:21.773  INFO 5472 --- [main] com.example.task5.Task5Application       : No active profile set, falling back to default profiles: default
+2022-05-20 05:52:23.563  INFO 5472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-20 05:52:23.701  INFO 5472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123ms. Found 2 JPA repository interfaces.
+2022-05-20 05:52:25.655  INFO 5472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-20 05:52:25.674  INFO 5472 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-20 05:52:25.675  INFO 5472 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-05-20 05:52:25.832  INFO 5472 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-20 05:52:25.834  INFO 5472 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3990 ms
+2022-05-20 05:52:26.455  INFO 5472 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-20 05:52:26.546  INFO 5472 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2022-05-20 05:52:27.003  INFO 5472 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-05-20 05:52:27.073  INFO 5472 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-20 05:52:28.142 ERROR 5472 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: FATAL: database "bdms" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2665) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:147) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:273) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.18.jar:42.2.18]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.5.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) [spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) [spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) [spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) [spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) [spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at com.example.task5.Task5Application.main(Task5Application.java:13) ~[classes/:na]
+
+2022-05-20 05:52:28.143  WARN 5472 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata : FATAL: database "bdms" does not exist
+2022-05-20 05:52:28.145  WARN 5472 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2022-05-20 05:52:28.153  INFO 5472 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-20 05:52:28.169  INFO 5472 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-20 05:52:28.174 ERROR 5472 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at com.example.task5.Task5Application.main(Task5Application.java:13) [classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	... 17 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	... 34 common frames omitted
+
+2022-05-20 05:52:49.361  INFO 5482 --- [main] com.example.task5.Task5Application       : Starting Task5Application on MacBook-Pro-user.local with PID 5482 (/Users/user/Downloads/onlineShop-master-2/target/classes started by user in /Users/user/Downloads/onlineShop-master-2)
+2022-05-20 05:52:49.364 DEBUG 5482 --- [main] com.example.task5.Task5Application       : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2022-05-20 05:52:49.365  INFO 5482 --- [main] com.example.task5.Task5Application       : No active profile set, falling back to default profiles: default
+2022-05-20 05:52:49.990  INFO 5482 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-20 05:52:50.080  INFO 5482 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77ms. Found 2 JPA repository interfaces.
+2022-05-20 05:52:50.941  INFO 5482 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-20 05:52:50.946  INFO 5482 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-20 05:52:50.946  INFO 5482 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-05-20 05:52:50.995  INFO 5482 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-20 05:52:50.996  INFO 5482 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1574 ms
+2022-05-20 05:52:51.157  INFO 5482 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-20 05:52:51.175  INFO 5482 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2022-05-20 05:52:51.315  INFO 5482 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-05-20 05:52:51.361  INFO 5482 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-20 05:52:51.425  INFO 5482 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-20 05:52:51.435  INFO 5482 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-05-20 05:52:51.919  INFO 5482 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-20 05:52:51.925  INFO 5482 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 05:52:52.024  WARN 5482 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-20 05:52:52.575 TRACE 5482 --- [main] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.daoAuthenticationProvider() arguments: []
+2022-05-20 05:52:52.590 TRACE 5482 --- [main] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.getPasswordEncoder() arguments: []
+2022-05-20 05:52:52.590 TRACE 5482 --- [main] com.example.task5.aop.LoggingAspect      : class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.getPasswordEncoder() response: org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder@1068176
+2022-05-20 05:52:52.591 TRACE 5482 --- [main] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.getUserDetailsService() arguments: []
+2022-05-20 05:52:52.592 TRACE 5482 --- [main] com.example.task5.aop.LoggingAspect      : class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.getUserDetailsService() response: com.example.task5.security.UserDetailsServiceImpl@71789580
+2022-05-20 05:52:52.592 TRACE 5482 --- [main] com.example.task5.aop.LoggingAspect      : class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.daoAuthenticationProvider() response: org.springframework.security.authentication.dao.DaoAuthenticationProvider@165614f5
+2022-05-20 05:52:52.642  INFO 5482 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@685d7ba5, org.springframework.security.web.context.SecurityContextPersistenceFilter@6eda012b, org.springframework.security.web.header.HeaderWriterFilter@6d969330, org.springframework.security.web.authentication.logout.LogoutFilter@150d6eaf, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6b16de91, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7772d266, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@16d41725, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d66a126, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2edb2f8b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b6c2be6, org.springframework.security.web.session.SessionManagementFilter@6c8f4bc7, org.springframework.security.web.access.ExceptionTranslationFilter@1b17d8ab, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38c460e8]
+2022-05-20 05:52:52.795  INFO 5482 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-20 05:52:53.050  INFO 5482 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-20 05:52:53.059  INFO 5482 --- [main] com.example.task5.Task5Application       : Started Task5Application in 4.0 seconds (JVM running for 4.515)
+2022-05-20 05:53:03.675  INFO 5482 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-20 05:53:03.677  INFO 5482 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-20 05:53:03.705  INFO 5482 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+2022-05-20 05:53:03.747 TRACE 5482 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.MainController.home() arguments: []
+2022-05-20 05:53:03.760 TRACE 5482 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.MainController.home() response: home
+2022-05-20 05:53:18.997 TRACE 5482 --- [http-nio-8080-exec-4] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.security.UserDetailsServiceImpl.loadUserByUsername() arguments: [mta]
+2022-05-20 05:53:19.010 TRACE 5482 --- [http-nio-8080-exec-4] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.services.AccountService.findByUsername() arguments: [mta]
+2022-05-20 05:53:19.027 TRACE 5482 --- [http-nio-8080-exec-4] com.example.task5.aop.LoggingAspect      : method invoked: class com.sun.proxy.$Proxy100.findById() arguments: [mta]
+2022-05-20 05:53:19.088 TRACE 5482 --- [http-nio-8080-exec-4] com.example.task5.aop.LoggingAspect      : class com.sun.proxy.$Proxy100.findById() response: Optional.empty
+2022-05-20 05:53:19.088 TRACE 5482 --- [http-nio-8080-exec-4] com.example.task5.aop.LoggingAspect      : class com.example.task5.services.AccountService.findByUsername() response: username='null', password='null', balance=0
+2022-05-20 05:53:19.089 DEBUG 5482 --- [http-nio-8080-exec-4] c.e.task5.security.UserDetailsImpl       : auth:account with username: username='null', password='null', balance=0
+2022-05-20 05:53:19.089 DEBUG 5482 --- [http-nio-8080-exec-4] c.e.task5.security.UserDetailsImpl       : auth: authorities: [ROLE_USER]
+2022-05-20 05:53:19.089 TRACE 5482 --- [http-nio-8080-exec-4] com.example.task5.aop.LoggingAspect      : class com.example.task5.security.UserDetailsServiceImpl.loadUserByUsername() response: com.example.task5.security.UserDetailsImpl@4b5170a1
+2022-05-20 05:53:19.089  WARN 5482 --- [http-nio-8080-exec-4] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Empty encoded password
+2022-05-20 05:53:25.425 TRACE 5482 --- [http-nio-8080-exec-6] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.AccountsController.getSignupForm() arguments: [username='null', password='null', balance=0]
+2022-05-20 05:53:25.448 TRACE 5482 --- [http-nio-8080-exec-6] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.AccountsController.getSignupForm() response: accounts/signup
+2022-05-20 05:53:32.906 TRACE 5482 --- [http-nio-8080-exec-8] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.AccountsController.newAccount() arguments: [username='ppp', password='ppp', balance=0, ppp, org.springframework.validation.BeanPropertyBindingResult: 0 errors]
+2022-05-20 05:53:32.907 TRACE 5482 --- [http-nio-8080-exec-8] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.services.AccountService.create() arguments: [username='ppp', password='ppp', balance=0]
+2022-05-20 05:53:32.919 TRACE 5482 --- [http-nio-8080-exec-8] com.example.task5.aop.LoggingAspect      : method invoked: class com.sun.proxy.$Proxy100.findById() arguments: [ppp]
+2022-05-20 05:53:32.923 TRACE 5482 --- [http-nio-8080-exec-8] com.example.task5.aop.LoggingAspect      : class com.sun.proxy.$Proxy100.findById() response: Optional.empty
+2022-05-20 05:53:32.923 DEBUG 5482 --- [http-nio-8080-exec-8] c.example.task5.services.AccountService  : checking for unique username: username='null', password='null', balance=0
+2022-05-20 05:53:32.923 DEBUG 5482 --- [http-nio-8080-exec-8] c.example.task5.services.AccountService  : creating new user
+2022-05-20 05:53:32.923 TRACE 5482 --- [http-nio-8080-exec-8] com.example.task5.aop.LoggingAspect      : method invoked: class com.sun.proxy.$Proxy100.save() arguments: [username='ppp', password='$2a$07$JuvcTiTiFlq.MpE9DMTdG.TEZnOX96mo2RrWp7WXVSt0La1SN8Ix6', balance=0]
+2022-05-20 05:53:32.948 TRACE 5482 --- [http-nio-8080-exec-8] com.example.task5.aop.LoggingAspect      : class com.sun.proxy.$Proxy100.save() response: username='ppp', password='$2a$07$JuvcTiTiFlq.MpE9DMTdG.TEZnOX96mo2RrWp7WXVSt0La1SN8Ix6', balance=0
+2022-05-20 05:53:32.948 TRACE 5482 --- [http-nio-8080-exec-8] com.example.task5.aop.LoggingAspect      : class com.example.task5.services.AccountService.create() response: true
+2022-05-20 05:53:32.948 TRACE 5482 --- [http-nio-8080-exec-8] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.AccountsController.newAccount() response: redirect:/accounts
+2022-05-20 05:53:38.254 TRACE 5482 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.security.UserDetailsServiceImpl.loadUserByUsername() arguments: [ppp]
+2022-05-20 05:53:38.264 TRACE 5482 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.services.AccountService.findByUsername() arguments: [ppp]
+2022-05-20 05:53:38.265 TRACE 5482 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : method invoked: class com.sun.proxy.$Proxy100.findById() arguments: [ppp]
+2022-05-20 05:53:38.387 TRACE 5482 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : class com.sun.proxy.$Proxy100.findById() response: Optional[username='ppp', password='$2a$07$JuvcTiTiFlq.MpE9DMTdG.TEZnOX96mo2RrWp7WXVSt0La1SN8Ix6', balance=0]
+2022-05-20 05:53:38.387 TRACE 5482 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : class com.example.task5.services.AccountService.findByUsername() response: username='ppp', password='$2a$07$JuvcTiTiFlq.MpE9DMTdG.TEZnOX96mo2RrWp7WXVSt0La1SN8Ix6', balance=0
+2022-05-20 05:53:38.387 DEBUG 5482 --- [http-nio-8080-exec-1] c.e.task5.security.UserDetailsImpl       : auth:account with username: username='ppp', password='$2a$07$JuvcTiTiFlq.MpE9DMTdG.TEZnOX96mo2RrWp7WXVSt0La1SN8Ix6', balance=0
+2022-05-20 05:53:38.387 DEBUG 5482 --- [http-nio-8080-exec-1] c.e.task5.security.UserDetailsImpl       : auth: authorities: [ROLE_USER]
+2022-05-20 05:53:38.387 TRACE 5482 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : class com.example.task5.security.UserDetailsServiceImpl.loadUserByUsername() response: com.example.task5.security.UserDetailsImpl@77040bd3
+2022-05-20 05:53:38.420 TRACE 5482 --- [http-nio-8080-exec-2] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.AccountsController.getAccounts() arguments: [{}]
+2022-05-20 05:53:38.421 TRACE 5482 --- [http-nio-8080-exec-2] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.services.AccountService.findAll() arguments: []
+2022-05-20 05:53:38.497 TRACE 5482 --- [http-nio-8080-exec-2] com.example.task5.aop.LoggingAspect      : class com.example.task5.services.AccountService.findAll() response: [username='ppp', password='$2a$07$JuvcTiTiFlq.MpE9DMTdG.TEZnOX96mo2RrWp7WXVSt0La1SN8Ix6', balance=0]
+2022-05-20 05:53:38.497 TRACE 5482 --- [http-nio-8080-exec-2] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.AccountsController.getAccounts() response: accounts/all
+2022-05-20 05:53:41.621 TRACE 5482 --- [http-nio-8080-exec-4] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.ProductsController.getProducts() arguments: [{}]
+2022-05-20 05:53:41.653 TRACE 5482 --- [http-nio-8080-exec-4] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.services.ProductService.findAll() arguments: []
+2022-05-20 05:53:41.669 TRACE 5482 --- [http-nio-8080-exec-4] com.example.task5.aop.LoggingAspect      : class com.example.task5.services.ProductService.findAll() response: []
+2022-05-20 05:53:41.669 TRACE 5482 --- [http-nio-8080-exec-4] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.ProductsController.getProducts() response: products/all
+2022-05-20 05:53:42.976 TRACE 5482 --- [http-nio-8080-exec-6] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.ProductsController.getNewProductForm() arguments: [id=0, name='null', price=0, quantity=0]
+2022-05-20 05:53:42.977 TRACE 5482 --- [http-nio-8080-exec-6] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.ProductsController.getNewProductForm() response: products/new
+2022-05-20 05:53:44.454 TRACE 5482 --- [http-nio-8080-exec-8] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.MainController.home() arguments: []
+2022-05-20 05:53:44.455 TRACE 5482 --- [http-nio-8080-exec-8] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.MainController.home() response: home
+2022-05-20 05:53:53.168 TRACE 5482 --- [http-nio-8080-exec-10] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.ProductsController.getProducts() arguments: [{}]
+2022-05-20 05:53:53.176 TRACE 5482 --- [http-nio-8080-exec-10] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.services.ProductService.findAll() arguments: []
+2022-05-20 05:53:53.186 TRACE 5482 --- [http-nio-8080-exec-10] com.example.task5.aop.LoggingAspect      : class com.example.task5.services.ProductService.findAll() response: []
+2022-05-20 05:53:53.190 TRACE 5482 --- [http-nio-8080-exec-10] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.ProductsController.getProducts() response: products/all
+2022-05-20 05:53:54.075 TRACE 5482 --- [http-nio-8080-exec-2] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.ProductsController.getNewProductForm() arguments: [id=0, name='null', price=0, quantity=0]
+2022-05-20 05:53:54.075 TRACE 5482 --- [http-nio-8080-exec-2] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.ProductsController.getNewProductForm() response: products/new
+2022-05-20 05:54:00.209 TRACE 5482 --- [http-nio-8080-exec-4] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.ProductsController.newProduct() arguments: [id=0, name='pop', price=3, quantity=3]
+2022-05-20 05:54:00.211 TRACE 5482 --- [http-nio-8080-exec-4] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.services.ProductService.save() arguments: [id=0, name='pop', price=3, quantity=3]
+2022-05-20 05:54:00.235 TRACE 5482 --- [http-nio-8080-exec-4] com.example.task5.aop.LoggingAspect      : method invoked: class com.sun.proxy.$Proxy102.save() arguments: [id=0, name='pop', price=3, quantity=3]
+2022-05-20 05:54:00.267 TRACE 5482 --- [http-nio-8080-exec-4] com.example.task5.aop.LoggingAspect      : class com.sun.proxy.$Proxy102.save() response: id=1, name='pop', price=3, quantity=3
+2022-05-20 05:54:00.268 TRACE 5482 --- [http-nio-8080-exec-4] com.example.task5.aop.LoggingAspect      : class com.example.task5.services.ProductService.save() response: null
+2022-05-20 05:54:00.268 TRACE 5482 --- [http-nio-8080-exec-4] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.ProductsController.newProduct() response: redirect:/products
+2022-05-20 05:54:00.289 TRACE 5482 --- [http-nio-8080-exec-5] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.ProductsController.getProducts() arguments: [{}]
+2022-05-20 05:54:00.289 TRACE 5482 --- [http-nio-8080-exec-5] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.services.ProductService.findAll() arguments: []
+2022-05-20 05:54:00.292 TRACE 5482 --- [http-nio-8080-exec-5] com.example.task5.aop.LoggingAspect      : class com.example.task5.services.ProductService.findAll() response: [id=1, name='pop', price=3, quantity=3]
+2022-05-20 05:54:00.292 TRACE 5482 --- [http-nio-8080-exec-5] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.ProductsController.getProducts() response: products/all
+2022-05-20 05:54:07.011 TRACE 5482 --- [http-nio-8080-exec-7] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.AccountsController.getAccounts() arguments: [{}]
+2022-05-20 05:54:07.016 TRACE 5482 --- [http-nio-8080-exec-7] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.services.AccountService.findAll() arguments: []
+2022-05-20 05:54:07.034 TRACE 5482 --- [http-nio-8080-exec-7] com.example.task5.aop.LoggingAspect      : class com.example.task5.services.AccountService.findAll() response: [username='ppp', password='$2a$07$JuvcTiTiFlq.MpE9DMTdG.TEZnOX96mo2RrWp7WXVSt0La1SN8Ix6', balance=0]
+2022-05-20 05:54:07.036 TRACE 5482 --- [http-nio-8080-exec-7] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.AccountsController.getAccounts() response: accounts/all
+2022-05-20 05:55:22.354  INFO 5482 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-20 05:55:22.358  INFO 5482 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 05:55:22.369  INFO 5482 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-20 05:55:22.372  INFO 5482 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-20 06:00:09.409  INFO 5648 --- [main] com.example.task5.Task5Application       : Starting Task5Application on MacBook-Pro-user.local with PID 5648 (/Users/user/Downloads/onlineShop-master-2/target/classes started by user in /Users/user/Downloads/onlineShop-master-2)
+2022-05-20 06:00:09.412 DEBUG 5648 --- [main] com.example.task5.Task5Application       : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2022-05-20 06:00:09.413  INFO 5648 --- [main] com.example.task5.Task5Application       : No active profile set, falling back to default profiles: default
+2022-05-20 06:00:10.079  INFO 5648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-20 06:00:10.167  INFO 5648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76ms. Found 2 JPA repository interfaces.
+2022-05-20 06:00:11.090  INFO 5648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-20 06:00:11.096  INFO 5648 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-20 06:00:11.096  INFO 5648 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-05-20 06:00:11.161  INFO 5648 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-20 06:00:11.161  INFO 5648 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1693 ms
+2022-05-20 06:00:11.339  INFO 5648 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-20 06:00:11.365  INFO 5648 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2022-05-20 06:00:11.513  INFO 5648 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-05-20 06:00:11.569  INFO 5648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-20 06:00:11.646  INFO 5648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-20 06:00:11.663  INFO 5648 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-05-20 06:00:12.152  INFO 5648 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-20 06:00:12.157  INFO 5648 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 06:00:12.253  WARN 5648 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-20 06:00:12.803 TRACE 5648 --- [main] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.daoAuthenticationProvider() arguments: []
+2022-05-20 06:00:12.818 TRACE 5648 --- [main] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.getPasswordEncoder() arguments: []
+2022-05-20 06:00:12.818 TRACE 5648 --- [main] com.example.task5.aop.LoggingAspect      : class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.getPasswordEncoder() response: org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder@23ee2ccf
+2022-05-20 06:00:12.819 TRACE 5648 --- [main] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.getUserDetailsService() arguments: []
+2022-05-20 06:00:12.820 TRACE 5648 --- [main] com.example.task5.aop.LoggingAspect      : class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.getUserDetailsService() response: com.example.task5.security.UserDetailsServiceImpl@6e685e6c
+2022-05-20 06:00:12.820 TRACE 5648 --- [main] com.example.task5.aop.LoggingAspect      : class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.daoAuthenticationProvider() response: org.springframework.security.authentication.dao.DaoAuthenticationProvider@9d3d54e
+2022-05-20 06:00:12.874  INFO 5648 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25533bba, org.springframework.security.web.context.SecurityContextPersistenceFilter@1132baa3, org.springframework.security.web.header.HeaderWriterFilter@714e861f, org.springframework.security.web.authentication.logout.LogoutFilter@2b44605c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@383cdd4d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5fb8dc01, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@26d0ece6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a2546d6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7772d266, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@100bba26, org.springframework.security.web.session.SessionManagementFilter@6eda012b, org.springframework.security.web.access.ExceptionTranslationFilter@6d969330, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4e67cfe1]
+2022-05-20 06:00:13.035  INFO 5648 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-20 06:00:13.286  INFO 5648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-20 06:00:13.296  INFO 5648 --- [main] com.example.task5.Task5Application       : Started Task5Application in 4.235 seconds (JVM running for 4.946)
+2022-05-20 06:00:17.902  INFO 5648 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-20 06:00:17.904  INFO 5648 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-20 06:00:17.934  INFO 5648 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 30 ms
+2022-05-20 06:00:17.963 TRACE 5648 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.MainController.home() arguments: []
+2022-05-20 06:00:17.973 TRACE 5648 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.MainController.home() response: home
+2022-05-20 06:00:27.604  INFO 5648 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-20 06:00:27.608  INFO 5648 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 06:00:27.618  INFO 5648 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-20 06:00:27.623  INFO 5648 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-20 06:02:17.833  INFO 5710 --- [main] com.example.task5.Task5Application       : Starting Task5Application on MacBook-Pro-user.local with PID 5710 (/Users/user/Downloads/onlineShop-master-2/target/classes started by user in /Users/user/Downloads/onlineShop-master-2)
+2022-05-20 06:02:17.835 DEBUG 5710 --- [main] com.example.task5.Task5Application       : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2022-05-20 06:02:17.836  INFO 5710 --- [main] com.example.task5.Task5Application       : No active profile set, falling back to default profiles: default
+2022-05-20 06:02:18.600  INFO 5710 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-20 06:02:18.745  INFO 5710 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138ms. Found 2 JPA repository interfaces.
+2022-05-20 06:02:19.793  INFO 5710 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-20 06:02:19.803  INFO 5710 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-20 06:02:19.804  INFO 5710 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-05-20 06:02:19.868  INFO 5710 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-20 06:02:19.868  INFO 5710 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1973 ms
+2022-05-20 06:02:20.041  INFO 5710 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-20 06:02:20.066  INFO 5710 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2022-05-20 06:02:20.198  INFO 5710 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-05-20 06:02:20.250  INFO 5710 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-20 06:02:20.313  INFO 5710 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-20 06:02:20.327  INFO 5710 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-05-20 06:02:20.808  INFO 5710 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-20 06:02:20.813  INFO 5710 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 06:02:20.916  WARN 5710 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-20 06:02:21.473 TRACE 5710 --- [main] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.daoAuthenticationProvider() arguments: []
+2022-05-20 06:02:21.491 TRACE 5710 --- [main] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.getPasswordEncoder() arguments: []
+2022-05-20 06:02:21.491 TRACE 5710 --- [main] com.example.task5.aop.LoggingAspect      : class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.getPasswordEncoder() response: org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder@7708b66a
+2022-05-20 06:02:21.492 TRACE 5710 --- [main] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.getUserDetailsService() arguments: []
+2022-05-20 06:02:21.492 TRACE 5710 --- [main] com.example.task5.aop.LoggingAspect      : class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.getUserDetailsService() response: com.example.task5.security.UserDetailsServiceImpl@4dd2ef54
+2022-05-20 06:02:21.493 TRACE 5710 --- [main] com.example.task5.aop.LoggingAspect      : class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.daoAuthenticationProvider() response: org.springframework.security.authentication.dao.DaoAuthenticationProvider@359ceb13
+2022-05-20 06:02:21.550  INFO 5710 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@197ce367, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d969330, org.springframework.security.web.header.HeaderWriterFilter@712cd5d3, org.springframework.security.web.authentication.logout.LogoutFilter@7345f97d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@179ee36b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@307c59ea, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@383cdd4d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c8f4bc7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7282af25, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65036e8d, org.springframework.security.web.session.SessionManagementFilter@1b17d8ab, org.springframework.security.web.access.ExceptionTranslationFilter@6c07add6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@dc59ec2]
+2022-05-20 06:02:21.714  INFO 5710 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-20 06:02:21.970  INFO 5710 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-20 06:02:21.994  INFO 5710 --- [main] com.example.task5.Task5Application       : Started Task5Application in 4.471 seconds (JVM running for 5.19)
+2022-05-20 06:02:26.748  INFO 5710 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-20 06:02:26.749  INFO 5710 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-20 06:02:26.775  INFO 5710 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 26 ms
+2022-05-20 06:02:31.966 TRACE 5710 --- [http-nio-8080-exec-3] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.security.UserDetailsServiceImpl.loadUserByUsername() arguments: [123]
+2022-05-20 06:02:31.986 TRACE 5710 --- [http-nio-8080-exec-3] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.services.AccountService.findByUsername() arguments: [123]
+2022-05-20 06:02:32.009 TRACE 5710 --- [http-nio-8080-exec-3] com.example.task5.aop.LoggingAspect      : method invoked: class com.sun.proxy.$Proxy100.findById() arguments: [123]
+2022-05-20 06:02:32.048 TRACE 5710 --- [http-nio-8080-exec-3] com.example.task5.aop.LoggingAspect      : class com.sun.proxy.$Proxy100.findById() response: Optional.empty
+2022-05-20 06:02:32.048 TRACE 5710 --- [http-nio-8080-exec-3] com.example.task5.aop.LoggingAspect      : class com.example.task5.services.AccountService.findByUsername() response: username='null', password='null', balance=0
+2022-05-20 06:02:32.048 DEBUG 5710 --- [http-nio-8080-exec-3] c.e.task5.security.UserDetailsImpl       : auth:account with username: username='null', password='null', balance=0
+2022-05-20 06:02:32.048 DEBUG 5710 --- [http-nio-8080-exec-3] c.e.task5.security.UserDetailsImpl       : auth: authorities: [ROLE_USER]
+2022-05-20 06:02:32.048 TRACE 5710 --- [http-nio-8080-exec-3] com.example.task5.aop.LoggingAspect      : class com.example.task5.security.UserDetailsServiceImpl.loadUserByUsername() response: com.example.task5.security.UserDetailsImpl@3a01991c
+2022-05-20 06:02:32.049  WARN 5710 --- [http-nio-8080-exec-3] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Empty encoded password
+2022-05-20 06:02:37.572 TRACE 5710 --- [http-nio-8080-exec-5] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.AccountsController.getSignupForm() arguments: [username='null', password='null', balance=0]
+2022-05-20 06:02:37.579 TRACE 5710 --- [http-nio-8080-exec-5] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.AccountsController.getSignupForm() response: accounts/signup
+2022-05-20 06:02:51.405 TRACE 5710 --- [http-nio-8080-exec-7] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.AccountsController.newAccount() arguments: [username='www', password='www', balance=0, www, org.springframework.validation.BeanPropertyBindingResult: 0 errors]
+2022-05-20 06:02:51.406 TRACE 5710 --- [http-nio-8080-exec-7] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.services.AccountService.create() arguments: [username='www', password='www', balance=0]
+2022-05-20 06:02:51.419 TRACE 5710 --- [http-nio-8080-exec-7] com.example.task5.aop.LoggingAspect      : method invoked: class com.sun.proxy.$Proxy100.findById() arguments: [www]
+2022-05-20 06:02:51.422 TRACE 5710 --- [http-nio-8080-exec-7] com.example.task5.aop.LoggingAspect      : class com.sun.proxy.$Proxy100.findById() response: Optional.empty
+2022-05-20 06:02:51.422 DEBUG 5710 --- [http-nio-8080-exec-7] c.example.task5.services.AccountService  : checking for unique username: username='null', password='null', balance=0
+2022-05-20 06:02:51.422 DEBUG 5710 --- [http-nio-8080-exec-7] c.example.task5.services.AccountService  : creating new user
+2022-05-20 06:02:51.423 TRACE 5710 --- [http-nio-8080-exec-7] com.example.task5.aop.LoggingAspect      : method invoked: class com.sun.proxy.$Proxy100.save() arguments: [username='www', password='$2a$07$VkyK2LT0H.PftgnGU9f5jOPZltXKkk9dRwAQIYxJ2x3tM0ZX7gJLe', balance=0]
+2022-05-20 06:02:51.449 TRACE 5710 --- [http-nio-8080-exec-7] com.example.task5.aop.LoggingAspect      : class com.sun.proxy.$Proxy100.save() response: username='www', password='$2a$07$VkyK2LT0H.PftgnGU9f5jOPZltXKkk9dRwAQIYxJ2x3tM0ZX7gJLe', balance=0
+2022-05-20 06:02:51.449 TRACE 5710 --- [http-nio-8080-exec-7] com.example.task5.aop.LoggingAspect      : class com.example.task5.services.AccountService.create() response: true
+2022-05-20 06:02:51.449 TRACE 5710 --- [http-nio-8080-exec-7] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.AccountsController.newAccount() response: redirect:/accounts
+2022-05-20 06:02:55.948 TRACE 5710 --- [http-nio-8080-exec-10] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.security.UserDetailsServiceImpl.loadUserByUsername() arguments: [www]
+2022-05-20 06:02:55.950 TRACE 5710 --- [http-nio-8080-exec-10] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.services.AccountService.findByUsername() arguments: [www]
+2022-05-20 06:02:55.950 TRACE 5710 --- [http-nio-8080-exec-10] com.example.task5.aop.LoggingAspect      : method invoked: class com.sun.proxy.$Proxy100.findById() arguments: [www]
+2022-05-20 06:02:56.111 TRACE 5710 --- [http-nio-8080-exec-10] com.example.task5.aop.LoggingAspect      : class com.sun.proxy.$Proxy100.findById() response: Optional[username='www', password='$2a$07$VkyK2LT0H.PftgnGU9f5jOPZltXKkk9dRwAQIYxJ2x3tM0ZX7gJLe', balance=0]
+2022-05-20 06:02:56.114 TRACE 5710 --- [http-nio-8080-exec-10] com.example.task5.aop.LoggingAspect      : class com.example.task5.services.AccountService.findByUsername() response: username='www', password='$2a$07$VkyK2LT0H.PftgnGU9f5jOPZltXKkk9dRwAQIYxJ2x3tM0ZX7gJLe', balance=0
+2022-05-20 06:02:56.114 DEBUG 5710 --- [http-nio-8080-exec-10] c.e.task5.security.UserDetailsImpl       : auth:account with username: username='www', password='$2a$07$VkyK2LT0H.PftgnGU9f5jOPZltXKkk9dRwAQIYxJ2x3tM0ZX7gJLe', balance=0
+2022-05-20 06:02:56.114 DEBUG 5710 --- [http-nio-8080-exec-10] c.e.task5.security.UserDetailsImpl       : auth: authorities: [ROLE_USER]
+2022-05-20 06:02:56.114 TRACE 5710 --- [http-nio-8080-exec-10] com.example.task5.aop.LoggingAspect      : class com.example.task5.security.UserDetailsServiceImpl.loadUserByUsername() response: com.example.task5.security.UserDetailsImpl@1ef56fc1
+2022-05-20 06:02:56.149 TRACE 5710 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.AccountsController.getAccounts() arguments: [{}]
+2022-05-20 06:02:56.151 TRACE 5710 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.services.AccountService.findAll() arguments: []
+2022-05-20 06:02:56.320 TRACE 5710 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : class com.example.task5.services.AccountService.findAll() response: [username='ppp', password='$2a$07$JuvcTiTiFlq.MpE9DMTdG.TEZnOX96mo2RrWp7WXVSt0La1SN8Ix6', balance=0, username='www', password='$2a$07$VkyK2LT0H.PftgnGU9f5jOPZltXKkk9dRwAQIYxJ2x3tM0ZX7gJLe', balance=0]
+2022-05-20 06:02:56.321 TRACE 5710 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.AccountsController.getAccounts() response: accounts/all
+2022-05-20 06:03:00.250 TRACE 5710 --- [http-nio-8080-exec-3] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.AccountsController.detailAccount() arguments: [www, {}]
+2022-05-20 06:03:00.251 TRACE 5710 --- [http-nio-8080-exec-3] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.services.AccountService.findByUsername() arguments: [www]
+2022-05-20 06:03:00.251 TRACE 5710 --- [http-nio-8080-exec-3] com.example.task5.aop.LoggingAspect      : method invoked: class com.sun.proxy.$Proxy100.findById() arguments: [www]
+2022-05-20 06:03:00.257 TRACE 5710 --- [http-nio-8080-exec-3] com.example.task5.aop.LoggingAspect      : class com.sun.proxy.$Proxy100.findById() response: Optional[username='www', password='$2a$07$VkyK2LT0H.PftgnGU9f5jOPZltXKkk9dRwAQIYxJ2x3tM0ZX7gJLe', balance=0]
+2022-05-20 06:03:00.258 TRACE 5710 --- [http-nio-8080-exec-3] com.example.task5.aop.LoggingAspect      : class com.example.task5.services.AccountService.findByUsername() response: username='www', password='$2a$07$VkyK2LT0H.PftgnGU9f5jOPZltXKkk9dRwAQIYxJ2x3tM0ZX7gJLe', balance=0
+2022-05-20 06:03:00.258 TRACE 5710 --- [http-nio-8080-exec-3] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.AccountsController.detailAccount() response: accounts/detail
+2022-05-20 06:03:06.177 TRACE 5710 --- [http-nio-8080-exec-5] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.MainController.home() arguments: []
+2022-05-20 06:03:06.211 TRACE 5710 --- [http-nio-8080-exec-5] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.MainController.home() response: home
+2022-05-20 06:04:44.358  INFO 5710 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-20 06:04:44.365  INFO 5710 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 06:04:44.383  INFO 5710 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-20 06:04:44.392  INFO 5710 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-20 06:04:47.879  INFO 5769 --- [main] com.example.task5.Task5Application       : Starting Task5Application on MacBook-Pro-user.local with PID 5769 (/Users/user/Downloads/onlineShop-master-2/target/classes started by user in /Users/user/Downloads/onlineShop-master-2)
+2022-05-20 06:04:47.882 DEBUG 5769 --- [main] com.example.task5.Task5Application       : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2022-05-20 06:04:47.883  INFO 5769 --- [main] com.example.task5.Task5Application       : No active profile set, falling back to default profiles: default
+2022-05-20 06:04:48.673  INFO 5769 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-20 06:04:48.746  INFO 5769 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65ms. Found 2 JPA repository interfaces.
+2022-05-20 06:04:49.578  INFO 5769 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-20 06:04:49.583  INFO 5769 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-20 06:04:49.583  INFO 5769 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-05-20 06:04:49.641  INFO 5769 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-20 06:04:49.641  INFO 5769 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1692 ms
+2022-05-20 06:04:49.801  INFO 5769 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-20 06:04:49.823  INFO 5769 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2022-05-20 06:04:49.979  INFO 5769 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-05-20 06:04:50.044  INFO 5769 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-20 06:04:50.102  INFO 5769 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-20 06:04:50.112  INFO 5769 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-05-20 06:04:50.566  INFO 5769 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-20 06:04:50.572  INFO 5769 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 06:04:50.671  WARN 5769 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-20 06:04:51.142 TRACE 5769 --- [main] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.daoAuthenticationProvider() arguments: []
+2022-05-20 06:04:51.156 TRACE 5769 --- [main] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.getPasswordEncoder() arguments: []
+2022-05-20 06:04:51.156 TRACE 5769 --- [main] com.example.task5.aop.LoggingAspect      : class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.getPasswordEncoder() response: org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder@7767bd4e
+2022-05-20 06:04:51.157 TRACE 5769 --- [main] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.getUserDetailsService() arguments: []
+2022-05-20 06:04:51.157 TRACE 5769 --- [main] com.example.task5.aop.LoggingAspect      : class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.getUserDetailsService() response: com.example.task5.security.UserDetailsServiceImpl@433ef204
+2022-05-20 06:04:51.158 TRACE 5769 --- [main] com.example.task5.aop.LoggingAspect      : class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$bc6d15c0.daoAuthenticationProvider() response: org.springframework.security.authentication.dao.DaoAuthenticationProvider@795b66d
+2022-05-20 06:04:51.202  INFO 5769 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71bb8b34, org.springframework.security.web.context.SecurityContextPersistenceFilter@687eb455, org.springframework.security.web.header.HeaderWriterFilter@57a667c8, org.springframework.security.web.authentication.logout.LogoutFilter@14b8a751, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@25567581, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@20ffb8d5, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@197ce367, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4861cca9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a2546d6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@383cdd4d, org.springframework.security.web.session.SessionManagementFilter@2094bf3d, org.springframework.security.web.access.ExceptionTranslationFilter@7c4b5ceb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5abf6a99]
+2022-05-20 06:04:51.339  INFO 5769 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-20 06:04:51.581  INFO 5769 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-20 06:04:51.591  INFO 5769 --- [main] com.example.task5.Task5Application       : Started Task5Application in 4.033 seconds (JVM running for 4.856)
+2022-05-20 06:04:55.406  INFO 5769 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-20 06:04:55.407  INFO 5769 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-20 06:04:55.430  INFO 5769 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2022-05-20 06:04:55.458 TRACE 5769 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.MainController.home() arguments: []
+2022-05-20 06:04:55.469 TRACE 5769 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.MainController.home() response: home
+2022-05-20 06:05:02.036  INFO 5769 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-20 06:05:02.041  INFO 5769 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 06:05:02.049  INFO 5769 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-20 06:05:02.054  INFO 5769 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-20 06:06:20.637  INFO 5820 --- [main] com.example.task5.Task5Application       : Starting Task5Application on MacBook-Pro-user.local with PID 5820 (/Users/user/Downloads/onlineShop-master-2/target/classes started by user in /Users/user/Downloads/onlineShop-master-2)
+2022-05-20 06:06:20.640 DEBUG 5820 --- [main] com.example.task5.Task5Application       : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2022-05-20 06:06:20.641  INFO 5820 --- [main] com.example.task5.Task5Application       : No active profile set, falling back to default profiles: default
+2022-05-20 06:06:21.361  INFO 5820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-20 06:06:21.462  INFO 5820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90ms. Found 2 JPA repository interfaces.
+2022-05-20 06:06:22.331  INFO 5820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-20 06:06:22.336  INFO 5820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-20 06:06:22.337  INFO 5820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-05-20 06:06:22.389  INFO 5820 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-20 06:06:22.390  INFO 5820 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1689 ms
+2022-05-20 06:06:22.556  INFO 5820 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-20 06:06:22.582  INFO 5820 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2022-05-20 06:06:22.737  INFO 5820 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-05-20 06:06:22.787  INFO 5820 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-20 06:06:22.851  INFO 5820 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-20 06:06:22.864  INFO 5820 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-05-20 06:06:23.350  INFO 5820 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-20 06:06:23.355  INFO 5820 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 06:06:23.455  WARN 5820 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-20 06:06:23.986 TRACE 5820 --- [main] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$ae4eabbd.daoAuthenticationProvider() arguments: []
+2022-05-20 06:06:24.002 TRACE 5820 --- [main] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$ae4eabbd.getPasswordEncoder() arguments: []
+2022-05-20 06:06:24.002 TRACE 5820 --- [main] com.example.task5.aop.LoggingAspect      : class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$ae4eabbd.getPasswordEncoder() response: org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder@359ceb13
+2022-05-20 06:06:24.003 TRACE 5820 --- [main] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$ae4eabbd.getUserDetailsService() arguments: []
+2022-05-20 06:06:24.003 TRACE 5820 --- [main] com.example.task5.aop.LoggingAspect      : class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$ae4eabbd.getUserDetailsService() response: com.example.task5.security.UserDetailsServiceImpl@5bf4764d
+2022-05-20 06:06:24.004 TRACE 5820 --- [main] com.example.task5.aop.LoggingAspect      : class com.example.task5.configs.SecurityConfiguration$$EnhancerBySpringCGLIB$$ae4eabbd.daoAuthenticationProvider() response: org.springframework.security.authentication.dao.DaoAuthenticationProvider@23ee2ccf
+2022-05-20 06:06:24.058  INFO 5820 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36551e97, org.springframework.security.web.context.SecurityContextPersistenceFilter@28989415, org.springframework.security.web.header.HeaderWriterFilter@687eb455, org.springframework.security.web.authentication.logout.LogoutFilter@6b832551, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3dc39459, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@21dea711, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@685d7ba5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@781dbe44, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57e03347, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16d41725, org.springframework.security.web.session.SessionManagementFilter@4861cca9, org.springframework.security.web.access.ExceptionTranslationFilter@2094bf3d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b01cb8d]
+2022-05-20 06:06:24.216  INFO 5820 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-20 06:06:24.471  INFO 5820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-20 06:06:24.479  INFO 5820 --- [main] com.example.task5.Task5Application       : Started Task5Application in 4.163 seconds (JVM running for 4.715)
+2022-05-20 06:06:36.938  INFO 5820 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-20 06:06:36.939  INFO 5820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-20 06:06:37.058  INFO 5820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 119 ms
+2022-05-20 06:06:37.289 TRACE 5820 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : method invoked: class com.example.task5.controllers.MainController.home() arguments: []
+2022-05-20 06:06:37.309 TRACE 5820 --- [http-nio-8080-exec-1] com.example.task5.aop.LoggingAspect      : class com.example.task5.controllers.MainController.home() response: home
+2022-05-20 06:06:43.854  INFO 5820 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-20 06:06:43.858  INFO 5820 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 06:06:43.870  INFO 5820 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-20 06:06:43.875  INFO 5820 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-20 09:17:42.696  INFO 25559 --- [main] com.example.task5.Task5Application       : Starting Task5Application on Nurzhamals-MacBook-Air.local with PID 25559 (/Users/nurzhamal/Downloads/onlineShop-master-2/target/classes started by nurzhamal in /Users/nurzhamal/Downloads/onlineShop-master-2)
+2022-05-20 09:17:42.701 DEBUG 25559 --- [main] com.example.task5.Task5Application       : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2022-05-20 09:17:42.701  INFO 25559 --- [main] com.example.task5.Task5Application       : No active profile set, falling back to default profiles: default
+2022-05-20 09:17:43.612  INFO 25559 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-20 09:17:43.802  INFO 25559 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 179ms. Found 2 JPA repository interfaces.
+2022-05-20 09:17:45.002  INFO 25559 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-20 09:17:45.011  INFO 25559 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-20 09:17:45.012  INFO 25559 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-05-20 09:17:45.084  INFO 25559 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-20 09:17:45.084  INFO 25559 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2250 ms
+2022-05-20 09:17:45.334  INFO 25559 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-20 09:17:45.372  INFO 25559 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2022-05-20 09:17:45.565  INFO 25559 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-05-20 09:17:45.730  INFO 25559 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-20 09:17:46.805 ERROR 25559 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: FATAL: database "bank" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2665) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:147) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:273) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.18.jar:42.2.18]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.5.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) [spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) [spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) [spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) [spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) [spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at com.example.task5.Task5Application.main(Task5Application.java:13) ~[classes/:na]
+
+2022-05-20 09:17:46.810  WARN 25559 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata : FATAL: database "bank" does not exist
+2022-05-20 09:17:46.815  WARN 25559 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2022-05-20 09:17:46.825  INFO 25559 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-20 09:17:46.865  INFO 25559 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-20 09:17:46.872 ERROR 25559 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at com.example.task5.Task5Application.main(Task5Application.java:13) [classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	... 17 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	... 34 common frames omitted
+
+2022-05-20 09:18:13.785  INFO 25568 --- [main] com.example.task5.Task5Application       : Starting Task5Application on Nurzhamals-MacBook-Air.local with PID 25568 (/Users/nurzhamal/Downloads/onlineShop-master-2/target/classes started by nurzhamal in /Users/nurzhamal/Downloads/onlineShop-master-2)
+2022-05-20 09:18:13.790 DEBUG 25568 --- [main] com.example.task5.Task5Application       : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2022-05-20 09:18:13.791  INFO 25568 --- [main] com.example.task5.Task5Application       : No active profile set, falling back to default profiles: default
+2022-05-20 09:18:14.663  INFO 25568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-20 09:18:14.749  INFO 25568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70ms. Found 2 JPA repository interfaces.
+2022-05-20 09:18:15.659  INFO 25568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-20 09:18:15.665  INFO 25568 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-20 09:18:15.665  INFO 25568 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-05-20 09:18:15.729  INFO 25568 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-20 09:18:15.729  INFO 25568 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1841 ms
+2022-05-20 09:18:15.918  INFO 25568 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-20 09:18:16.037  INFO 25568 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2022-05-20 09:18:16.153  INFO 25568 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-05-20 09:18:16.220  INFO 25568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-20 09:18:17.275 ERROR 25568 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: FATAL: database "bank" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2665) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:147) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:273) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.18.jar:42.2.18]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.5.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) [hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) [spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) [spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) [spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) [spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) [spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at com.example.task5.Task5Application.main(Task5Application.java:13) ~[classes/:na]
+
+2022-05-20 09:18:17.281  WARN 25568 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata : FATAL: database "bank" does not exist
+2022-05-20 09:18:17.292  WARN 25568 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2022-05-20 09:18:17.310  INFO 25568 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-20 09:18:17.339  INFO 25568 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-20 09:18:17.348 ERROR 25568 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at com.example.task5.Task5Application.main(Task5Application.java:13) [classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	... 17 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	... 34 common frames omitted
+

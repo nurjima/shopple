@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPPLE</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+<!-- container div -->
+<div class="container">
+    <script src="js/sidebar.js"></script>
+    <script src="js/mainDiv.js"></script>
+    <header th:insert="fragments :: header"></header>
+    <div th:insert="fragments :: menu"></div>
+    <!-- navbar -->
+    <div class="navbar">
+        <h1><a href="#">SHOPPLE</a></h1>
+        <div class="navi">
+            <a href="#">home</a>
+            <a href="#btn">products</a>
+            <a href="#footer">contact</a>
+        </div>
+        <div class="icons">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 3l-.743 2h-1.929l-3.474 12h-13.239l-4.615-11h16.812l-.564 2h-13.24l2.937 7h10.428l3.432-12h4.195zm-15.5 15c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm6.9-7-1.9 7c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5z"/></svg>
+            </a>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-3.123 0-5.914-1.441-7.749-3.69.259-.588.783-.995 1.867-1.246 2.244-.518 4.459-.981 3.393-2.945-3.155-5.82-.899-9.119 2.489-9.119 3.322 0 5.634 3.177 2.489 9.119-1.035 1.952 1.1 2.416 3.393 2.945 1.082.25 1.61.655 1.871 1.241-1.836 2.253-4.628 3.695-7.753 3.695z"/></svg>
+            </a>
+        </div>
+        <div class="nav-switch">
+            <div class="ham"></div>
+            <div class="ham"></div>
+            <div class="ham"></div>
+        </div>
+    </div>
+
+    <!-- backdrop -->
+    <div class="backdrop"></div>
+
+    <!-- sidebar -->
+    <div class="sidebar">
+        <div class="heading">SHOPPLE</div>
+        <div class="links">
+            <a href="#">home</a>
+            <a href="#btn">products</a>
+            <a href="#footer">contact</a>
+            <div class="icons1">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 3l-.743 2h-1.929l-3.474 12h-13.239l-4.615-11h16.812l-.564 2h-13.24l2.937 7h10.428l3.432-12h4.195zm-15.5 15c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm6.9-7-1.9 7c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5z"/></svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-3.123 0-5.914-1.441-7.749-3.69.259-.588.783-.995 1.867-1.246 2.244-.518 4.459-.981 3.393-2.945-3.155-5.82-.899-9.119 2.489-9.119 3.322 0 5.634 3.177 2.489 9.119-1.035 1.952 1.1 2.416 3.393 2.945 1.082.25 1.61.655 1.871 1.241-1.836 2.253-4.628 3.695-7.753 3.695z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="images/logo1.png" alt="logo">
+        </div>
+    </div>
+
+    <!-- content -->
+    <div class="content">
+        <div class="main-first">
+            <img src="images/bg2.png" alt="background" class="img-cont">
+            <p class="text-cont">
+                The product<br>
+                you always<br>
+                desired.<br>
+            </p>
+        </div>
+
+        <div class="jumbotron">
+            <h1>Start your shopple journey</h1>
+            <p>The new era of Apple is landed and it's ready for whatever is next.</p>
+            <a href="#btn" id="btn" class="shop-btn">Shop</a>
+        </div>
+
+        <div class="item-1">
+            <div class="vert"></div>
+            <div class="horz" id="a1"></div>
+            <div class="shoe-desc">
+                <h1>iPhone 13. Alpine Green</h1>
+                <p>
+                    <b>New Ultra Wide camera</b> reveals more detail in the dark areas of your photos <br><br><b>New Wide camera</b> captures 47% more light for better photos and videos <br><br><b> New sensor-shift</b> optical image stabilization keeps shots steady even when you’re not
+                </p>
+                <p class="price">
+                    489,990₸
+                </p>
+            </div>
+            <img src="images/item1.jpg" alt="item1" class="item-img">
+
+        </div>
+
+        <div class="item-2">
+            <img src="images/item2.jpg" alt="item1" class="item-img">
+            <div class="vert2"></div>
+            <div class="horz2" id="a2"></div>
+            <div class="shoe-desc">
+                <h1>AirPods 3rd Generation</h1>
+                <p>
+                    <b>It’s magic, remastered.</b> <br><br> With spatial audio that places sound all around you, Adaptive EQ that tunes music to your ears and longer battery life that charges up in a snap.
+                </p>
+                <p class="price">
+                    115,990₸
+                </p>
+            </div>
+        </div>
+
+        <div class="featured">
+            <h1>Featured Items</h1>
+            <h2>Hand picked for you!</h2>
+            <div class="card-cont">
+                <div class="card">
+                    <img src="images/product1.png" alt="item1" class="feat-img">
+                    <p class="feat-txt">
+                        Apple Watch Series 8
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/product2.jpg" alt="item2" class="feat-img">
+                    <p class="feat-txt">
+                        AirPods Max
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/product3.jpg" alt="item3" class="feat-img">
+                    <p class="feat-txt">
+                        Apple 12.9-inch iPad Pro
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <div class="footer" id="footer">
+        <div class="quick-links">
+            <h1>Quick Links</h1>
+            <a href="#">Home</a> <br>
+            <a href="#btn">Products</a> <br>
+            <a href="mailto:nshalieva02n@gmail.com">Send Us Feedback</a>
+        </div>
+        <div class="quick-links">
+            <h1>About Us</h1>
+            <a href="https://github.com/nurjima/shopple" target="_">
+                Github
+            </a>
+            <a href="https://www.linkedin.com/in/nshaliyeva/" target="_">
+                LinkedIN
+            </a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
